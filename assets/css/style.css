@@ -1096,3 +1096,47 @@ section .container {
     transform: translateX(-50%);
   }
 }
+
+.section-bg {
+  background-color: #f8f9fa;
+}
+
+.edu-card {
+  margin: 10px;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box {
+  text-align: center;
+}
+
+.edu-logo {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.coursework h5 {
+  margin-top: 15px;
+}
+
+.coursework ul {
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* AOS Animation Improvements */
+[data-aos="fade-up"] {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+[data-aos-delay="100"] {
+  transition-delay: 0.1s;
+}
+
+[data-aos-delay="200"] {
+  transition-delay: 0.2s;
+}
