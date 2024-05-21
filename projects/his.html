@@ -55,8 +55,8 @@
               <h2 style="color: #12d640">Homographic Image Stitching</h2>
               <ul>
                 <li>
-                  <strong>GitHub Repository:</strong>
-                  <a
+                  <strong>GitHub Repository:</strong
+                  ><a
                     href="https://github.com/thakkarnitin63/Homographic-image-stitching"
                     target="_blank"
                     >Project Link</a
@@ -65,19 +65,56 @@
               </ul>
               <h3>Project Overview</h3>
               <p>
-                This project demonstrates the technique of Homographic Image
-                Stitching. The process involves aligning and stitching together
-                multiple images using homography transformations to create a
-                seamless panoramic image.
+                This project explores the use of homographic transformations for
+                image stitching, where multiple overlapping photographs are
+                seamlessly merged to form a single panoramic image. This
+                technique finds extensive use in photography, virtual reality,
+                and geographic imaging.
               </p>
               <p>
-                Homography is estimated from matches across different images
-                which allows for precise alignment even with perspective shifts.
+                Homographic transformations account for the changes in
+                perspective, allowing for alignment of images taken from
+                different angles. The accuracy of this process is critical,
+                particularly in achieving loop closure, where the start and end
+                of the panoramic sequence meet.
               </p>
+              <h3>Technical Implementation</h3>
               <p>
-                The resulting stitched image can be used in applications such as
-                virtual tours, panoramic photography, and in various fields of
-                research.
+                The implementation leverages several computer vision techniques
+                to enhance the quality and precision of the stitching:
+              </p>
+              <ul>
+                <li>
+                  <strong>Feature Detection and Matching:</strong> Key points
+                  are detected in each image using the SIFT algorithm, which are
+                  robust to changes in scale, rotation, and illumination.
+                  Corresponding points between overlapping images are matched
+                  based on feature similarity.
+                </li>
+                <li>
+                  <strong>Estimation of Homography:</strong> For each pair of
+                  matched images, a homographic matrix is calculated that best
+                  aligns them into a common plane.
+                </li>
+                <li>
+                  <strong>Image Warping and Blending:</strong> Images are warped
+                  (transformed) according to calculated homographies, and then
+                  blended smoothly to avoid visible seams.
+                </li>
+                <li>
+                  <strong>Optimization with GTSAM:</strong> Global optimization
+                  techniques are applied using the GTSAM library to refine all
+                  homography matrices simultaneously, ensuring global
+                  consistency and improving loop closure.
+                </li>
+              </ul>
+              <h3>Results and Discussion</h3>
+              <p>
+                The results demonstrate significant improvements in image
+                alignment and panorama smoothness after optimization. The loop
+                closure, critical for the panoramic integrity, is specifically
+                enhanced, providing a virtually seamless image even at the
+                joining edges.
               </p>
               <h3>Visualizations and Results</h3>
               <div class="row">
