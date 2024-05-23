@@ -67,25 +67,73 @@
               </ul>
 
               <p>
-                This project involves the fusion of Lidar and camera sensor data
-                enhanced by semantic segmentation to improve autonomous
-                navigation. By integrating these technologies, the project aims
-                to create a more detailed and accurate 3D mapping of
-                environments, which is critical for navigation in complex
-                settings.
+                This project demonstrates the integration of Lidar and camera
+                data using advanced computer vision techniques to enhance
+                autonomous navigation systems. It includes semantic segmentation
+                to classify different environmental elements, which is crucial
+                for path planning and obstacle avoidance in autonomous vehicles.
               </p>
               <p>
-                The fusion process combines high-resolution images from cameras
-                with depth information from Lidar to create a comprehensive view
-                of the surroundings. Semantic segmentation further processes
-                these images to classify different regions of the environment,
-                aiding in better decision-making for navigation systems.
+                The fusion technique combines the geometric depth information
+                from Lidar with high-resolution images from cameras. This
+                process starts with the alignment of 2D image data with 3D Lidar
+                points using Perspective-n-Point (PnP) algorithms and Random
+                Sample Consensus (RANSAC) to robustly estimate the pose and
+                correspondences.
               </p>
               <p>
-                The project employs advanced algorithms for data calibration,
-                alignment, and fusion, providing valuable insights for
-                applications in robotics and autonomous vehicles.
+                We apply semantic segmentation models to the camera images to
+                categorize various objects within the environment. This
+                segmentation helps in enhancing the decision-making process of
+                the navigation system by identifying and classifying obstacles
+                and drivable paths.
               </p>
+
+              <h3>Technical Implementation and Outputs</h3>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <div class="portfolio-img">
+                  <img
+                    src="../assets/img/project/fusion.jpeg"
+                    class="img-fluid"
+                    alt="Sensor Fusion Visualization"
+                  />
+                  <figcaption>
+                    Combined Lidar and Camera Visualization
+                  </figcaption>
+                </div>
+                <div class="portfolio-img">
+                  <img
+                    src="../assets/img/project/2d3dcorrespond.jpeg"
+                    class="img-fluid"
+                    alt="2D-3D Correspondence"
+                  />
+                  <figcaption>2D and 3D Point Correspondences</figcaption>
+                </div>
+                <div class="portfolio-img">
+                  <img
+                    src="../assets/img/project/segmentedmap.jpeg"
+                    class="img-fluid"
+                    alt="Semantic Segmentation Map"
+                  />
+                  <figcaption>
+                    Semantic Segmentation of the Environment
+                  </figcaption>
+                </div>
+                <div class="portfolio-img">
+                  <img
+                    src="../assets/img/project/checker.jpeg"
+                    class="img-fluid"
+                    alt="Calibration Checkerboard"
+                  />
+                  <figcaption>Calibration Process with Checkerboard</figcaption>
+                </div>
+              </div>
             </div>
           </div>
         </div>
